@@ -20,3 +20,8 @@ evaluate == 0.4.2
 
 ## Fine-tuning Results
 roberta-urdu-small achieved 94.19% F1-score, while muril-based-cased achieved an F1-scoe of 94.14%. 
+
+## Findings
+In the evaluation of the fine-tuned roberta-urdu-small by comparing true labels with predicted labels, it was observed that our fine-tuned model demonstrated corrective abilities by rectifying mis-classifications present in the labeled test dataset.
+
+For instance, "نیویارک لیبر ڈیپارٹمنٹ" (New York Labor Department) should be labeled as an organization, however, in the MK-PUCIT corpus it is labeled as "Other" meanwhile our model tags "نیویارک" (New York) as "Location" while "لیبر" (Labor) and " ڈیپارٹمنٹ" (Department) are tagged as "Other". Another notable example is found in the phrase "رنبیر کی نئی کامیڈی فلم" (Ranbir’s new comedy film), where our model correctly classifies "رنبیر" (Ranbir) as a "Person," recognizing it as the name of a renowned Bollywood actor. In contrast, MK-PUCIT labels "رنبیر" as a "Location," introducing a misclassification that could impact the model's training.
