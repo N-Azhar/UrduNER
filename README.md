@@ -17,3 +17,6 @@ datasets == 2.19.1
 seqeval == 1.2.2   
 transformers[torch] == 4.40.2     
 evaluate == 0.4.2    
+
+## Fine-tuning Results
+roberta-urdu-small achieved 94.19% F1-score, while muril-based-cased achieved an F1-scoe of 94.14%. 
